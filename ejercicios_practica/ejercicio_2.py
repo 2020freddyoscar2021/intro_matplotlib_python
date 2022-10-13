@@ -45,5 +45,16 @@ if __name__ == '__main__':
     # a su elección
 
     # Crear acá su gráfico
+    fig = plt.figure()
+    ax = fig.add_subplot()
+
+    ax.plot(x, y1, color='b', marker='^', label='y=x**2')
+    ax.plot(x, y2, color='c', marker='+', label='y=x**3')
+    ax.set_facecolor('whitesmoke')
+    ax.set_title("Dos graficos de linea")
+    ax.set_ylabel("Y[dependiente]")
+    ax.set_xlabel("X[independiente]")
+    ax.legend()
+    plt.show()
 
     print("terminamos")

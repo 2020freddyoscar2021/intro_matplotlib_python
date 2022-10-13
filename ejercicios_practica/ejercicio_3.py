@@ -8,6 +8,7 @@
 # que aparecen en verde con el hashtag "#"
 
 # Ejercicios de matplotlib
+from cProfile import label
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -34,4 +35,17 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+
+
+    fig = plt.figure()
+    fig.suptitle('Scatter', fontsize=16)
+    ax = fig.add_subplot()
+    ax.scatter(x, y, c='darkcyan', label='y=tanh(x)')
+    ax.set_facecolor('whitesmoke')
+    ax.set_ylabel("Y[tanh(x)]")
+    ax.set_xlabel("X[range]")
+    ax.grid('solid')
+    ax.legend()
+    
+    plt.show()
     print("terminamos")

@@ -7,7 +7,7 @@
 # IMPORTANTE: NO borrar los comentarios
 # que aparecen en verde con el hashtag "#"
 
-# Ejercicios de matplotlib
+# Ejercicios de matplotlib 
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -53,5 +53,43 @@ if __name__ == '__main__':
     # Colocar una grilla a elección
 
     # Crear acá su gráfico
+
+    fig = plt.figure()
+    # ax = fig.add_subplot(nrows, ncols, index)
+    ax1 = fig.add_subplot(2, 2, 1)
+    ax2 = fig.add_subplot(2, 2, 2)
+    ax3 = fig.add_subplot(2, 2, 3)
+    ax4 = fig.add_subplot(2, 2, 4)
+
+    ax1.plot(x, y1, color='b', marker='^', label='y=x**2')
+    ax1.set_facecolor('whitesmoke')
+    ax1.set_title("x**2",  position=(0.5, 0.85))
+    ax1.set_ylabel("Y=x**2")
+    ax1.set_xlabel("X")
+    ax1.legend()
+
+    ax2.plot(x, y2, color='y', marker='*', label='y=x**3')
+    ax2.set_facecolor('whitesmoke')
+    ax2.set_title("x**3",  position=(0.5, 0.85))
+    ax2.set_ylabel("Y=x**3")
+    ax2.set_xlabel("X")
+    ax2.legend()
+
+    ax3.plot(x, y3, color='g', marker='.', label='y=x**4')
+    ax3.set_facecolor('whitesmoke')
+    ax3.set_title("x**4",  position=(0.5, 0.85))
+    ax3.set_ylabel("Y=x**4")
+    ax3.set_xlabel("X")
+    ax3.legend()
+
+    ax4.plot(x, y4, color='k', marker='+', label='y=np.sqrt(x)')
+    ax4.set_facecolor('whitesmoke')
+    ax4.set_title("np.sqrt(x)",  position=(0.5, 0.85))
+    ax4.set_ylabel("Y=np.sqrt(x)")
+    ax4.set_xlabel("X")
+    ax4.legend()
+
+    # Graficar la figura con los 4 axes
+    plt.show()
 
     print("terminamos")
